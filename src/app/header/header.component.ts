@@ -1,4 +1,5 @@
-import { Component, Output, EventEmitter } from "@angular/core";
+import { Component } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
     selector:"app-header",
@@ -6,8 +7,9 @@ import { Component, Output, EventEmitter } from "@angular/core";
 })
 
 export class HeaderComponent{
-    @Output() selectedFeature= new EventEmitter<string>();
-    onSelect(feature:string){
-        this.selectedFeature.emit(feature);
-    }
+    //initialize the route
+    constructor(){}
+
+    
+    
 }
