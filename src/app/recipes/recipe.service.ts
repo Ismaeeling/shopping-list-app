@@ -21,6 +21,11 @@ export class RecipeServices{
       ];
 
     constructor(private shoppingList:ShoppingListService){}
+
+    setRecipe(recipes:Recipe[]){
+        this.recipes= recipes;
+        this.recipeChanged.next(this.recipes.slice());
+    }
     
 
     //make recipe available from outside components
